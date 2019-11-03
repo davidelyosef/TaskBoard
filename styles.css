@@ -1,0 +1,80 @@
+body {
+    font-family: cursive;
+    background-image: url(assets/images/tile.jpg);
+}
+#title {
+text-align: center;
+margin-top: 1%;
+}
+
+#time, #date {
+    padding: 3%;
+}
+
+#notebookPaper {
+    background-image: linear-gradient(#f3f3f3, white);
+    box-shadow: 2px 2px 2px 2px darkslategray;
+    border-radius: 13px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 2%;
+    overflow: auto;
+}
+
+#container > div {
+    width: 160px;
+    height: 6.4cm;
+    padding: 1%;
+    background-image: url("assets/images/notebg.png");
+    margin: 30px;
+    display: block;
+    display: inline-block;
+    animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 350%;
+}
+
+.paraDescription {
+    overflow: auto;
+    top: 20px;
+    height: 4.3cm;
+    margin-top: 10px;
+
+}
+.paraDate {
+    bottom: 1px;
+    left: 12px;
+}
+
+.glyphicon:hover{
+    border: 1px solid red;
+    color: red;
+}
+.glyphicon{ 
+    color: transparent;
+    margin-top: 5.5px;
+}
+
+.dateZone, .timeZone, .buttons {
+    display: inline-block;
+    overflow: auto;
+    margin: 3px;
+}
+
+
+

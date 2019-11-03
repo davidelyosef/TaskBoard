@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Task Board</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="updateTime(), loadNotes(), formatDate()">
+
+    <h1>My Task Board</h1>
+    <br>
+    <form>
+        <div id="notebookPaper">
+
+            <label>Description:</label>
+            <textarea id="textBox" class="form-control" autofocus required></textarea>
+
+            <div class="dateZone">
+                <label>Date:</label>
+                <input type="date" id="datePick" class="form-control datepicker" required>
+            </div>
+            <div class="timeZone">
+                <label>Time:</label>
+                <input type="time" id="time" class="form-control">
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-primary" type="button" onclick="saveNote()">Add Note</button>
+                <button class="btn btn-primary" type="reset">clean</button>
+            </div>
+
+        </div>
+    </form>
+
+
+    <div id="container">
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
