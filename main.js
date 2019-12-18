@@ -41,8 +41,34 @@ function saveNote() {
     let str = JSON.stringify(allNotes)
     localStorage.setItem("userDetails", str);
 
-    displayNotes();
+    createNote(note);
     cleanNoteBook();
+}
+//create dynamic element in the DOM.
+function createNote(note) {
+
+    let container = document.getElementById("container");
+
+    let div = document.createElement("div");
+    div.id = note.id;
+    container.appendChild(div);
+
+    let exit = document.createElement("image");
+    exit.setAttribute("class", "glyphicon glyphicon-remove");
+    exit.style.cssFloat = "right";
+    exit.style.marginRight = "-10px"
+    exit.onclick = deleteNote;
+    div.appendChild(exit);
+
+    let description = document.createElement("p");
+    description.innerHTML = note.description;
+    description.classList.add("paraDescription");
+    div.appendChild(description);
+
+    let date = document.createElement("p");
+    date.innerHTML = note.date + "<br>" + note.time;
+    date.classList.add("paraDate");
+    div.appendChild(date);
 }
 //Create the notePad with the data 
 function displayNotes() {
