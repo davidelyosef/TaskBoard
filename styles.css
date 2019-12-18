@@ -61,13 +61,15 @@ h1 {
     left: 12px;
 }
 
-.glyphicon:hover{
-    border: 1px solid red;
+#container > div:hover .glyphicon{
     color: red;
 }
 .glyphicon{ 
     color: transparent;
     margin-top: 5.5px;
+}
+.glyphicon:hover {
+    transform: scale(1.2);
 }
 
 .dateZone, .timeZone, .buttons {
