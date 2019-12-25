@@ -8,12 +8,16 @@
     <title>My Task Board</title>
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body onload="updateTime(), loadNotes(), formatDate()">
 
-    <h1>My Task Board</h1>
+    <h1>
+        <span>My</span>&nbsp;
+        <span>Task</span>&nbsp;
+        <span>Board</span></h1>
     <br>
     <form>
         <div id="notebookPaper">
@@ -38,8 +42,21 @@
         </div>
     </form>
 
+    <div id="container"></div>
 
-    <div id="container">
+    <div id="footer">
+        &copy;All Rights reserved to David-el Yosef
+        <div id="logos">
+            <a target="_blank" href="https://github.com/davidelyosef">
+                <img src="./assets/images/github-white.png" alt="link">
+            </a>
+            <a target="_blank" href="mailto: davidyf96@gmail.com">
+                <img src="./assets/images/gmail.png" alt="link">
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/david-el-yosef-5736b7196/">
+                <img src="./assets/images/linkedin.png" alt="link">
+            </a>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
