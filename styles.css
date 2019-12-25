@@ -1,6 +1,6 @@
 body::before {
     width: 120%;
-    height: 110%;
+    height: 120%;
     content: "";
     position: fixed;
     top: -10%;
