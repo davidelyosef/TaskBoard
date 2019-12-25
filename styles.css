@@ -1,6 +1,38 @@
+body::before {
+    width: 120%;
+    height: 110%;
+    content: "";
+    position: fixed;
+    top: -10%;
+    right: -10%;
+    left: -10%;
+    z-index: -1;
+    background: url("assets/images/board.jpg") 0 0 repeat;
+    background-size: cover;
+    background-position: center top;
+    animation: backBlur 5s infinite;
+    animation: spinBack 5s infinite;
+    animation-fill-mode: forwards;
+}
 body {
-    font-family: cursive;
-    background-image: url(assets/images/tile.jpg);
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@font-face {
+    font-family: kghappy;
+    src: url('./assets/fonts//KGHAPPY.ttf');
+}
+h1 {
+    color: transparent;
+}
+h1 span{
+    color: white;
+    font-family: kghappy;
 }
 #title {
 text-align: center;
@@ -18,31 +50,33 @@ margin-top: 1%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 60%;
     padding: 2%;
     overflow: auto;
+    opacity: 0.8;
+}
+
+#notebookPaper:hover {
+    opacity: 1;
+}
+
+#container {
+    margin-bottom: 100px;
 }
 
 #container > div {
-    width: 160px;
-    height: 6.4cm;
+    width: 230px;
+    height: 18em;
     padding: 1%;
-    background-image: url("assets/images/notebg.png");
-    margin: 30px;
-    display: block;
+    background-image: url("./assets/images/white_note.png");
+    background-size: 230px;
+    margin: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     display: inline-block;
     animation: fadeIn 4s;
 }
 
-@keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-    
-}
 h1 {
     text-align: center;
     text-decoration: underline;
@@ -53,8 +87,7 @@ h1 {
     overflow: auto;
     top: 20px;
     height: 4.3cm;
-    margin-top: 10px;
-
+    margin-top: 30px;
 }
 .paraDate {
     bottom: 1px;
@@ -78,5 +111,73 @@ h1 {
     margin: 3px;
 }
 
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px -10px 20px 5px rgba(0, 0, 0, 0.7), inset 0px -5px 13px 5px #5724047a;
+    border-top: 4px solid #e2a734;
+    background: linear-gradient(to top, #73320b 10%, #954714 30%, #a86020 100%, #66a5ad);
+    letter-spacing: 3px;
+}
 
+#footer #logos {
+    float: right;
+}
+#footer #logos a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+} 
+#footer #logos a img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 580px) {
+    #notebookPaper {
+        width: 95%;
+    }
+    #footer {
+        font-size: 12px;
+        letter-spacing: normal;
+    }
+    #footer #logos a img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .paraDescription {
+        margin-top: 20px;
+        top: 0;
+        height: 3cm;
+    }
+    #container > div {
+        width: 150px;
+        height: 14em;
+        background-size: 150px;
+    }
+}
+@media only screen and (max-width: 250px) {
+    h1 {
+        transform: scale(0.8);
+    }
+    #notebookPaper {
+        overflow: hidden;
+    }
+    #notebookPaper > .dateZone input {
+        width: 85%;
+    }
+    #footer {
+        text-align: center;
+    }
+    #footer #logos {
+        float: none;
+    }
+}
 
