@@ -1,0 +1,44 @@
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes backBlur {
+    0% {
+      -webkit-filter: blur(1px);
+    }
+    50% {
+      -webkit-filter: blur(3px);
+    }
+    100% {
+      -webkit-filter: blur(1px);
+    }
+}
+@keyframes spinBack {
+    0% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    25% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    50% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+      -webkit-transform: scale(1.03);
+              transform: scale(1.03);
+    }
+    75% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+  }
